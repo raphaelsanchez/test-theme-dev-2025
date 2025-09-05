@@ -1,13 +1,501 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <title>Productly</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-        <script type="module" src="/src/main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Productly offers design thinking and UX tools to improve user experience. Tests, surveys and marketing strategies."
+    />
+    <title>Productly - Design Thinking and UX Tools</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <img src="/images/logo-productly.svg" alt="Productly logo" />
+      <div class="nav-container">
+        <nav class="nav-primary">
+          <ul aria-label="Main navigation">
+            <li class="nav-item">
+              <a class="nav-link" href="#product" title="Discover our products"
+                >Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#customers" title="See our customers"
+                >Customers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing" title="Check our pricing"
+                >Pricing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#resources" title="Access resources"
+                >Resources</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-cta" aria-label="Sign in or sign up">
+          <a href="#signin">Sign in</a>
+          <a href="#signup">Sign up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-content">
+      <section class="is-layout-constrained" id="hero">
+        <div class="columns">
+          <div class="column">
+            <h1 class="hero-title">The Design Thinking superpowers</h1>
+            <p class="hero-description">
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <div class="button-group">
+              <a href="#get-started">Get started</a>
+              <a href="#watch-video">Watch the video</a>
+            </div>
+          </div>
+          <div class="column">
+            <img
+              src="/images/design-thinking-superpowers.svg"
+              alt="Illustration of people jumping for celebration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="features">
+        <h2>We design tools to unveil your superpowers</h2>
+        <div class="columns">
+          <div class="column">
+            <svg
+              width="51"
+              height="50"
+              viewBox="0 0 51 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="19"
+                fill="var(--color-accent-2)"
+              />
+              <path
+                d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                fill="white"
+              />
+            </svg>
+            <h3 class="feature-title">First click tests</h3>
+            <p class="feature-description">
+              While most people enjoy casino gambling,
+            </p>
+          </div>
+
+          <div class="column">
+            <svg
+              width="51"
+              height="50"
+              viewBox="0 0 51 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="19"
+                fill="var(--color-accent-1)"
+              />
+              <path
+                d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                fill="white"
+              />
+            </svg>
+            <h3 class="feature-title">Design surveys</h3>
+            <p class="feature-description">
+              Sports betting, lottery and bingo playing for the fun.
+            </p>
+          </div>
+
+          <div class="column">
+            <svg
+              width="51"
+              height="50"
+              viewBox="0 0 51 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="19"
+                fill="var(--color-accent-3)"
+              />
+              <path
+                d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                fill="white"
+              />
+            </svg>
+            <h3 class="feature-title">Preference tests</h3>
+            <p class="feature-description">
+              The Myspace page defines the individual.
+            </p>
+          </div>
+
+          <div class="column">
+            <svg
+              width="51"
+              height="50"
+              viewBox="0 0 51 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="19"
+                fill="var(--color-accent-4)"
+              />
+              <path
+                d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                fill="white"
+              />
+            </svg>
+            <h3 class="feature-title">Five second tests</h3>
+            <p class="feature-description">
+              Personal choices and the overall personality of the person.
+            </p>
+          </div>
+        </div>
+        <div class="button-group">
+          <a href="#signup-features">Sign up now</a>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="professionals">
+        <div class="columns">
+          <div class="column">
+            <p>Effortless Validation for</p>
+            <h2>Design professionals</h2>
+            <p>
+              The Myspace page defines the individual, his or her
+              characteristics, traits, personal choices and the overall
+              personality of the person.
+            </p>
+            <dl>
+              <dt>Accessory makers</dt>
+              <dd>
+                While most people enjoy casino gambling, sports betting, lottery
+                and bingo playing for the fun
+              </dd>
+              <dt>Alterationists</dt>
+              <dd>
+                If you are looking for a new way to promote your business that
+                won’t cost you more money
+              </dd>
+              <dt>Custom Design designers</dt>
+              <dd>
+                If you are looking for a new way to promote your business that
+                won’t cost you more money
+              </dd>
+            </dl>
+          </div>
+          <div class="column">
+            <img
+              src="/images/design-professionnal.svg"
+              alt="Illustration of a man showing a design"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="managers">
+        <div class="columns is-desktop-reverse">
+          <div class="column">
+            <p>Easier decision making for</p>
+            <h2>Product managers</h2>
+            <p>
+              The Myspace page defines the individual, his or her
+              characteristics, traits, personal choices and the overall
+              personality of the person.
+            </p>
+            <ul>
+              <li>Never worry about overpaying for your energy again.</li>
+              <li>
+                We will only switch you to energy companies that we trust and
+                will treat you right
+              </li>
+              <li>
+                We track the markets daily and know where the savings are.
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <img
+              src="/images/product-managers.svg"
+              alt="Illustration of a man working on laptop"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="marketers">
+        <div class="columns">
+          <div class="column">
+            <p>Optimisation for</p>
+            <h2>Marketers</h2>
+            <p>
+              Few would argue that, despite the advancements of feminism over
+              the past three decades, women still face a double standard when it
+              comes to their behavior.
+            </p>
+            <dl>
+              <dt>Accessory makers</dt>
+              <dd>
+                While most people enjoy casino gambling, sports betting, lottery
+                and bingo playing for the fun
+              </dd>
+              <dt>Alterationists</dt>
+              <dd>
+                If you are looking for a new way to promote your business that
+                won’t cost you more money,
+              </dd>
+              <dt>Custom Design designers</dt>
+              <dd>
+                If you are looking for a new way to promote your business that
+                won’t cost you more money,
+              </dd>
+            </dl>
+          </div>
+
+          <div class="column">
+            <img
+              src="/images/marketers.svg"
+              alt="Illustration of a man showing a board with cards"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="hero-cta">
+        <div class="columns is-stacked">
+          <div class="column">
+            <h2>Need a super hero?</h2>
+            <p>
+              Do you require some help for your project: Conception workshop,
+              prototyping, marketing strategy, landing page, Ux/Ui?
+            </p>
+            <a href="#contact-expert" title="Contact an expert for your project"
+              >Contact our expert</a
+            >
+          </div>
+
+          <div class="column floating-elements">
+            <div class="floating-element">
+              <img src="/images/avator.jpg" alt="Portrait of a pitch expert" />
+              <p>I can take care of your pitch</p>
+            </div>
+            <div class="floating-element">
+              <img
+                src="/images/avator-1.jpg"
+                alt="Portrait of an app prototyping expert"
+              />
+              <p>I can prototype your app</p>
+            </div>
+            <div class="floating-element">
+              <img
+                src="/images/avator-2.jpg"
+                alt="Portrait of a marketing strategy expert"
+              />
+              <p>I can help marketing strategy</p>
+            </div>
+            <div class="floating-element">
+              <img
+                src="/images/avator-3.jpg"
+                alt="Portrait of a user profile definition expert"
+              />
+              <p>I will define the profile of your users</p>
+            </div>
+            <div class="floating-element">
+              <img
+                src="/images/avator-4.jpg"
+                alt="Portrait of a website design expert"
+              />
+              <p>I can design you website</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="is-layout-constrained" id="marketing-strategies">
+        <h2>Marketing Strategies</h2>
+        <p>
+          Join 40,000+ other marketers and get proven strategies on email
+          marketing
+        </p>
+
+        <div
+          class="carousel"
+          role="region"
+          aria-label="Marketing strategy articles"
+        >
+          <div class="carousel-items" role="tabpanel" aria-live="polite">
+            <article
+              class="carousel-item"
+              role="tabpanel"
+              aria-labelledby="article1"
+            >
+              <figure class="carousel-item-image">
+                <img
+                  src="/images/positive-thinking.png"
+                  alt="Illustration representing positive thinking"
+                />
+              </figure>
+              <div class="carousel-item-content">
+                <p>By <span>Abdullah</span> | 03 March 2019</p>
+                <h3 id="article1">
+                  Increasing Prosperity With Positive Thinking
+                </h3>
+              </div>
+            </article>
+            <article
+              class="carousel-item"
+              role="tabpanel"
+              aria-labelledby="article2"
+            >
+              <figure class="carousel-item-image">
+                <img
+                  src="/images/step-to-success.png"
+                  alt="Illustration representing steps to success"
+                />
+              </figure>
+              <div class="carousel-item-content">
+                <p>By <span>Abdullah</span> | 03 March 2019</p>
+                <h3 id="article2">Motivation Is The First Step To Success</h3>
+              </div>
+            </article>
+            <article
+              class="carousel-item"
+              role="tabpanel"
+              aria-labelledby="article3"
+            >
+              <figure class="carousel-item-image">
+                <img
+                  src="/images/personal-or-business-life.png"
+                  alt="Illustration representing work-life balance"
+                />
+              </figure>
+              <div class="carousel-item-content">
+                <p>By <span>Abdullah</span> | 03 March 2019</p>
+                <h3 id="article3">
+                  Success Steps For Your Personal Or Business Life
+                </h3>
+              </div>
+            </article>
+          </div>
+          <div
+            class="carousel-bullets-controls"
+            role="tablist"
+            aria-label="Carousel navigation"
+          >
+            <button
+              role="tab"
+              aria-selected="true"
+              aria-label="Article 1: Increasing Prosperity With Positive Thinking"
+            >
+              1
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-label="Article 2: Motivation Is The First Step To Success"
+            >
+              2
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-label="Article 3: Success Steps For Your Personal Or Business Life"
+            >
+              3
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer is-layout-constrained" role="contentinfo">
+      <div class="columns">
+        <div class="column">
+          <img src="/images/logo-productly.svg" alt="Productly logo" />
+        </div>
+        <div class="column footer-nav">
+          <nav id="quick-links" aria-labelledby="quick-links-heading">
+            <h3 id="quick-links-heading" class="visually-hidden">
+              Quick links
+            </h3>
+            <p>Quick Links</p>
+            <ul class="nav-list is-direction-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            </ul>
+          </nav>
+          <nav id="legal-links" aria-labelledby="legal-links-heading">
+            <h3 id="legal-links-heading" class="visually-hidden">
+              Legal information
+            </h3>
+            <p>Legal Stuff</p>
+            <ul class="nav-list is-direction-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Disclaimer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Financing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Terms of Service</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="column footer-signup">
+          <p>Knowing you're always on the best energy deal.</p>
+          <form action="#" method="post" novalidate>
+            <label for="phone-number" class="visually-hidden"
+              >Phone number</label
+            >
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+              aria-describedby="phone-help"
+            />
+            <div id="phone-help" class="visually-hidden">
+              Please enter your phone number
+            </div>
+            <button type="submit">Sign up Now</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
