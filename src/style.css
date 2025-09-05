@@ -655,11 +655,12 @@ input:focus-visible {
 @media (width < 768px) {
   .site-header .nav-container {
     position: absolute;
+    z-index: 100;
     top: 100%;
     inset-inline: var(--spacing-md);
     width: calc(100% - var(--spacing-md) * 2);
     background-color: var(--color-base);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius-base);
     box-shadow: var(--shadow-base);
     transition: var(--transition-base);
