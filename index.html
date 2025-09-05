@@ -465,16 +465,17 @@
     </main>
 
     <footer class="site-footer is-layout-constrained" role="contentinfo">
-      <div class="columns">
+      <div class="columns is-mobile-stacked">
         <div class="column">
           <img src="/images/logo-productly.svg" alt="Productly logo" />
         </div>
-        <div class="column footer-nav">
+        <div
+          class="column footer-nav is-layout-flex is-align-start is-mobile-stacked"
+        >
           <nav id="quick-links" aria-labelledby="quick-links-heading">
-            <h3 id="quick-links-heading" class="visually-hidden">
+            <h3 id="quick-links-heading" class="text-md font-bold">
               Quick links
             </h3>
-            <p>Quick Links</p>
             <ul class="nav-list is-direction-column">
               <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
@@ -485,10 +486,9 @@
             </ul>
           </nav>
           <nav id="legal-links" aria-labelledby="legal-links-heading">
-            <h3 id="legal-links-heading" class="visually-hidden">
-              Legal information
+            <h3 id="legal-links-heading" class="text-md font-bold">
+              Legal stuff
             </h3>
-            <p>Legal Stuff</p>
             <ul class="nav-list is-direction-column">
               <li class="nav-item">
                 <a class="nav-link" href="#">Disclaimer</a>
@@ -506,23 +506,27 @@
           </nav>
         </div>
         <div class="column footer-signup">
-          <p>Knowing you're always on the best energy deal.</p>
+          <h3 class="text-md font-bold">
+            Knowing you're always on the best energy deal.
+          </h3>
           <form action="#" method="post" novalidate>
-            <label for="phone-number" class="visually-hidden"
-              >Phone number</label
-            >
-            <input
-              type="tel"
-              id="phone-number"
-              name="phone"
-              placeholder="Enter your phone number"
-              required
-              aria-describedby="phone-help"
-            />
-            <div id="phone-help" class="visually-hidden">
-              Please enter your phone number
+            <div class="is-layout-flex is-direction-column is-align-start">
+              <label for="phone-number" class="visually-hidden"
+                >Phone number</label
+              >
+              <input
+                type="tel"
+                id="phone-number"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+                aria-describedby="phone-help"
+              />
+              <div id="phone-help" class="visually-hidden">
+                Please enter your phone number
+              </div>
+              <button class="button" type="submit">Sign up Now</button>
             </div>
-            <button type="submit">Sign up Now</button>
           </form>
         </div>
       </div>
