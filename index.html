@@ -12,41 +12,71 @@
     <script type="module" src="/src/main.js" defer></script>
   </head>
   <body>
-    <header class="site-header" role="banner">
-      <img src="/images/logo-productly.svg" alt="Productly logo" />
-      <div class="nav-container">
-        <nav class="nav-primary">
-          <ul aria-label="Main navigation">
-            <li class="nav-item">
-              <a class="nav-link" href="#product" title="Discover our products"
-                >Product</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#customers" title="See our customers"
-                >Customers</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pricing" title="Check our pricing"
-                >Pricing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#resources" title="Access resources"
-                >Resources</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <nav class="nav-cta" aria-label="Sign in or sign up">
-          <a href="#signin">Sign in</a>
-          <a href="#signup">Sign up</a>
-        </nav>
+    <a href="#content" class="skip-link">Skip to main content</a>
+    <header class="site-header is-layout-constrained" role="banner">
+      <div class="is-layout-flex is-justify-between">
+        <img src="/images/logo-productly.svg" alt="Productly logo" />
+        <div class="nav-container is-layout-flex is-justify-right">
+          <nav class="nav-primary" aria-hidden="true">
+            <ul class="nav-items is-layout-flex" aria-label="Main navigation">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#product"
+                  title="Discover our products"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#customers" title="See our customers"
+                  >Customers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing" title="Check our pricing"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resources" title="Access resources"
+                  >Resources</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav
+            class="nav-cta is-layout-flex is-align-center"
+            aria-label="Sign in or sign up"
+          >
+            <a class="button is-style-outline" href="#signin">Sign in</a>
+            <a class="button" href="#signup">Sign up</a>
+          </nav>
+        </div>
+        <button
+          class="button is-style-hollow mobile-menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg
+            width="30"
+            height="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            aria-hidden="true"
+            stroke="currentColor"
+          >
+            <path stroke-width="2" d="M4 8 L26 8"></path>
+            <path stroke-width="2" d="M4 15 L26 15"></path>
+            <path stroke-width="2" d="M4 22 L26 22"></path>
+          </svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
       </div>
     </header>
 
-    <main class="site-content">
+    <main id="content" class="site-content">
       <section class="is-layout-constrained" id="hero">
         <div class="columns">
           <div class="column">
