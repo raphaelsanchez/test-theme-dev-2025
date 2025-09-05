@@ -1,4 +1,6 @@
 import "./style.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { initMobileMenu } from "./mobileMenu.js";
 import { initCarousels } from "./carousel.js";
 
@@ -16,3 +18,16 @@ initMobileMenu();
  * @returns {void}
  */
 initCarousels();
+
+/**
+ * Initialize AOS (Animate On Scroll)
+ *
+ * @returns {void}
+ */
+AOS.init({
+  duration: 1000,
+  easing: "ease-in-out",
+  once: true,
+  mirror: false,
+  offset: 100,
+});
