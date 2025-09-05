@@ -12,37 +12,45 @@
     <script type="module" src="/src/main.js" defer></script>
   </head>
   <body>
-    <header class="site-header" role="banner">
-      <img src="/images/logo-productly.svg" alt="Productly logo" />
-      <div class="nav-container">
-        <nav class="nav-primary">
-          <ul aria-label="Main navigation">
-            <li class="nav-item">
-              <a class="nav-link" href="#product" title="Discover our products"
-                >Product</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#customers" title="See our customers"
-                >Customers</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pricing" title="Check our pricing"
-                >Pricing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#resources" title="Access resources"
-                >Resources</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <nav class="nav-cta" aria-label="Sign in or sign up">
-          <a href="#signin">Sign in</a>
-          <a href="#signup">Sign up</a>
-        </nav>
+    <header class="site-header is-layout-constrained" role="banner">
+      <div class="is-layout-flex is-justify-between">
+        <img src="/images/logo-productly.svg" alt="Productly logo" />
+        <div class="nav-container is-layout-flex is-justify-right">
+          <nav class="nav-primary">
+            <ul class="nav-items is-layout-flex" aria-label="Main navigation">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#product"
+                  title="Discover our products"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#customers" title="See our customers"
+                  >Customers</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing" title="Check our pricing"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resources" title="Access resources"
+                  >Resources</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav
+            class="nav-cta is-layout-flex is-align-center"
+            aria-label="Sign in or sign up"
+          >
+            <a class="button is-style-outline" href="#signin">Sign in</a>
+            <a class="button" href="#signup">Sign up</a>
+          </nav>
+        </div>
       </div>
     </header>
 

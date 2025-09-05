@@ -71,6 +71,28 @@ h6 {
   text-wrap: balance;
 }
 
+/* Remove list bullets and indent if is driven by a class */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Remove default link styles if is driven by a class */
+a[class] {
+  text-decoration: none;
+}
+
+/* Make links inherit color */
+a {
+  color: inherit;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 /* Prevent empty elements to create empty lines */
 :empty:where(p, h1, h2, h3, h4, h5, h6) {
   display: none;
@@ -116,6 +138,7 @@ h6 {
 
   /* Responsive font sizes */
   --font-size-base: 1rem;
+  --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: clamp(1.125rem, 0.8226rem + 0.9677vw, 1.5rem);
   --font-size-lg: clamp(1.375rem, 0.6694rem + 2.2581vw, 2.25rem);
@@ -127,6 +150,7 @@ h6 {
 
   /* Responsive spacings */
   --spacing-base: 1rem;
+  --spacing-xs: 0.25rem; /* 8px */
   --spacing-sm: 0.75rem; /* 12px */
   --spacing-md: 1.25rem; /* 20px */
   --spacing-lg: 2.1875rem; /* 35px */
@@ -171,4 +195,127 @@ h6 {
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/poppins-v23-latin-700.woff2") format("woff2");
+}
+
+/*
+  Base elements
+*/
+
+/* Text */
+body {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-contrast);
+}
+
+/*
+  Components
+*/
+
+/* Navigation */
+.nav-items {
+  gap: var(--spacing-md);
+}
+
+.nav-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-base);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-accent-1);
+  color: var(--color-accent-1-contrast);
+  font-weight: var(--font-weight-medium);
+}
+
+.button.is-style-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-contrast-300);
+  color: var(--color-contrast);
+}
+
+/*
+  Layout
+*/
+
+/* Header */
+.site-header {
+  padding-block: var(--spacing-md);
+}
+
+.site-header .nav-container {
+  gap: var(--spacing-lg);
+}
+
+.site-header .nav-cta {
+  gap: var(--spacing-sm);
+}
+
+/* 
+  Utilities 
+*/
+
+.is-layout-constrained > * {
+  width: min(var(--container-width), 100%);
+  margin-inline: auto;
+}
+
+.is-layout-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Default value */
+}
+
+/* Align items */
+.is-align-start {
+  align-items: start;
+}
+
+.is-align-end {
+  align-items: end;
+}
+
+.is-align-center {
+  align-items: center;
+}
+
+.is-align-stretch {
+  align-items: stretch;
+}
+
+.is-align-baseline {
+  align-items: baseline;
+}
+
+/* Justify content */
+.is-justify-start {
+  justify-content: start;
+}
+
+.is-justify-center {
+  justify-content: center;
+}
+
+.is-justify-end {
+  justify-content: end;
+}
+
+.is-justify-between {
+  justify-content: space-between;
+}
+
+.is-justify-around {
+  justify-content: space-around;
+}
+
+.is-justify-evenly {
+  justify-content: space-evenly;
 }
