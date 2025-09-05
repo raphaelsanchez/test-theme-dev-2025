@@ -184,6 +184,11 @@ button {
     1.25rem + 3.75vw,
     4rem
   ); /* 32px mobile → 64px desktop */
+  --spacing-xxl: clamp(
+    3rem,
+    1.875rem + 4.5vw,
+    6rem
+  ); /* 48px mobile → 96px desktop */
 
   /* Border radius */
   --border-radius-base: 0.25rem;
@@ -254,6 +259,17 @@ h6 {
   line-height: 1.2;
 }
 
+/* Lists */
+dt {
+  font-weight: var(--font-weight-bold);
+  margin-block-end: var(--spacing-xs);
+}
+
+dd {
+  margin-block-end: var(--spacing-lg);
+}
+
+/* Forms */
 input {
   width: 100%;
   border: 1px solid var(--color-contrast-100);
@@ -339,6 +355,34 @@ input:focus-visible {
 
 .column {
   flex: 1;
+}
+
+/* List */
+.list.is-style-checkmark {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.list.is-style-checkmark li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.list.is-style-checkmark li::before {
+  content: "";
+  flex-shrink: 0;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35' fill='none'><path d='M21.1455 0C28.797 0 35 6.20305 35 13.8545V21.1455C35 28.797 28.797 35 21.1455 35H13.8545C6.20305 35 0 28.797 0 21.1455V13.8545C0 6.20305 6.20305 0 13.8545 0H21.1455ZM25.7656 12.2393C25.4533 11.9203 24.9472 11.9204 24.6348 12.2393L15.0498 22.0273L11.3652 18.2656C11.0528 17.9466 10.5468 17.9466 10.2344 18.2656C9.9221 18.5847 9.92199 19.1019 10.2344 19.4209L14.4844 23.7607C14.7967 24.0797 15.3031 24.0794 15.6152 23.7607L25.7656 13.3945C26.078 13.0755 26.078 12.5583 25.7656 12.2393Z' fill='%23FF9900'/></svg>");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: var(--color-accent-1);
 }
 
 /* Burger menu */
@@ -510,12 +554,12 @@ input:focus-visible {
   margin-block-start: var(--spacing-xl);
   padding-block: var(--spacing-xl);
   border-block-start: 1px solid var(--color-contrast-100);
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   justify-content: space-between;
 }
 
 .site-footer .footer-nav {
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
 
   & > * {
     flex: 1;
@@ -530,6 +574,7 @@ input:focus-visible {
 .site-content > * {
   padding-block: var(--spacing-xl);
 }
+
 /* 
   Utilities 
 */
@@ -625,6 +670,9 @@ input:focus-visible {
 }
 .gap-xl {
   gap: var(--spacing-xl);
+}
+.gap-xxl {
+  gap: var(--spacing-xxl);
 }
 
 /* Text align */
