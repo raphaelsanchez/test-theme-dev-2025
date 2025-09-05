@@ -16,7 +16,7 @@
       <div class="is-layout-flex is-justify-between">
         <img src="/images/logo-productly.svg" alt="Productly logo" />
         <div class="nav-container is-layout-flex is-justify-right">
-          <nav class="nav-primary">
+          <nav class="nav-primary" aria-hidden="true">
             <ul class="nav-items is-layout-flex" aria-label="Main navigation">
               <li class="nav-item">
                 <a
@@ -51,6 +51,27 @@
             <a class="button" href="#signup">Sign up</a>
           </nav>
         </div>
+        <button
+          class="button is-style-hollow mobile-menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg
+            width="30"
+            height="30"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            aria-hidden="true"
+            stroke="currentColor"
+          >
+            <path stroke-width="2" d="M4 8 L26 8"></path>
+            <path stroke-width="2" d="M4 15 L26 15"></path>
+            <path stroke-width="2" d="M4 22 L26 22"></path>
+          </svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
       </div>
     </header>
 

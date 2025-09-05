@@ -20,6 +20,11 @@ html {
   interpolate-size: allow-keywords;
 }
 
+/* Prevent scroll when mobile menu is open */
+body.prevent-scroll {
+  overflow: hidden;
+}
+
 body {
   /* Add accessible line-height */
   line-height: 1.5;
@@ -91,6 +96,18 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 /* Prevent empty elements to create empty lines */
@@ -242,17 +259,163 @@ body {
   color: var(--color-contrast);
 }
 
+.button.is-style-hollow {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+/* Burger menu */
+/*
+ * Hamburger lines reset animation, i.e. menu closed
+ */
+.mobile-menu-toggle svg path {
+  transform-origin: 50% 8px;
+  transition:
+    stroke 0.3s ease-in-out,
+    fill 0.3s ease-in-out;
+}
+.mobile-menu-toggle svg path:nth-of-type(1) {
+  animation: hamburgerTopReset 300ms ease-in-out forwards;
+}
+.mobile-menu-toggle svg path:nth-of-type(2) {
+  transform-origin: 50% 15px;
+  animation: hamburgerMiddleReset 300ms ease-in-out forwards;
+}
+.mobile-menu-toggle svg path:nth-of-type(3) {
+  transform-origin: 50% 22px;
+  animation: hamburgerBottomReset 300ms ease-in-out forwards;
+}
+
+/*
+ * Hamburger turns into X, i.e. menu open
+ */
+.mobile-menu-toggle[aria-expanded="true"] svg path:nth-of-type(1) {
+  animation: hamburgerTopDeform 300ms ease-in-out forwards;
+}
+.mobile-menu-toggle[aria-expanded="true"] svg path:nth-of-type(2) {
+  animation: hamburgerMiddleDeform 300ms ease-in-out forwards;
+}
+.mobile-menu-toggle[aria-expanded="true"] svg path:nth-of-type(3) {
+  animation: hamburgerBottomDeform 300ms ease-in-out forwards;
+}
+
+@keyframes hamburgerTopReset {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes hamburgerMiddleReset {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hamburgerBottomReset {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes hamburgerTopDeform {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+
+@keyframes hamburgerMiddleDeform {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hamburgerBottomDeform {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
 /*
   Layout
 */
 
 /* Header */
 .site-header {
+  position: relative;
   padding-block: var(--spacing-md);
 }
 
 .site-header .nav-container {
   gap: var(--spacing-lg);
+}
+
+@media (width < 768px) {
+  .site-header .nav-container {
+    position: absolute;
+    top: 100%;
+    inset-inline: var(--spacing-md);
+    width: calc(100% - var(--spacing-md) * 2);
+    background-color: var(--color-base);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--shadow-base);
+    transition: var(--transition-base);
+    &[aria-hidden="true"] {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  .site-header .nav-container,
+  .site-header .nav-items {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacing-md);
+  }
 }
 
 .site-header .nav-cta {
@@ -264,7 +427,7 @@ body {
 */
 
 .is-layout-constrained > * {
-  width: min(var(--container-width), 100%);
+  width: min(var(--container-width), 90%);
   margin-inline: auto;
 }
 
@@ -318,4 +481,19 @@ body {
 
 .is-justify-evenly {
   justify-content: space-evenly;
+}
+
+/* 
+  Accessibility 
+*/
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
