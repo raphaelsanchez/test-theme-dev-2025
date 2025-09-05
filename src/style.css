@@ -218,6 +218,12 @@ button {
   Base elements
 */
 
+*:focus-visible {
+  outline: 2px solid var(--color-accent-1);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-base);
+}
+
 /* Text */
 body {
   font-family: var(--font-family-base);
@@ -496,4 +502,20 @@ body {
   overflow: hidden;
   padding: 0;
   position: absolute;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  transform: translateY(-100vh);
+  transition: var(--transition-base);
+  padding: var(--spacing-xs) var(--spacing-base);
+  background-color: var(--color-accent-1);
+  color: var(--color-accent-1-contrast);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  z-index: 100;
 }
