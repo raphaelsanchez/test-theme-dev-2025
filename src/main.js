@@ -1,5 +1,6 @@
 import "./style.css";
 import { initMobileMenu } from "./mobileMenu.js";
+import { initCarousels } from "./carousel.js";
 
 /**
  * Initialize mobile menu
@@ -8,3 +9,10 @@ import { initMobileMenu } from "./mobileMenu.js";
  * @returns {void}
  */
 initMobileMenu();
+
+/**
+ * Initialize carousels
+ *
+ * @returns {void}
+ */
+initCarousels();
