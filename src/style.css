@@ -854,6 +854,9 @@ input:focus-visible {
   height: 100%;
   background: linear-gradient(to top, #ffffff, #ffeede);
   clip-path: ellipse(75% 100% at 50% 100%);
+  @media (width < 768px) {
+    clip-path: ellipse(150vw 100% at 50% 100%);
+  }
 }
 
 .has-bg-ellipse-gradient-reverse {
@@ -871,6 +874,9 @@ input:focus-visible {
   height: 100%;
   background: linear-gradient(to bottom, #ffffff, #ffeede);
   clip-path: ellipse(75% 100% at 50% 0%);
+  @media (width < 768px) {
+    clip-path: ellipse(150vw 100% at 50% 0%);
+  }
 }
 
 /* Text color */
