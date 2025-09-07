@@ -1,8 +1,32 @@
+// Reset styles
+import "./css/reset.css";
+
+// Tokens
+import "./css/tokens.css";
+
+// Fonts
+import "./css/fonts.css";
+
+// List component
+import "./css/list.css";
+
+// Button component
+import "./css/button.css";
+
+// Navigation component
+import "./css/navigation.css";
+import { initMobileMenu } from "./mobileMenu.js";
+
+// Styles for the project
 import "./style.css";
+
+// Carousel component
+import "./css/carousel.css";
+import { initCarousels } from "./carousel.js";
+
+// Animations component
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { initMobileMenu } from "./mobileMenu.js";
-import { initCarousels } from "./carousel.js";
 
 /**
  * Initialize mobile menu

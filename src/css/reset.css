@@ -1,0 +1,132 @@
+/*
+  Modern CSS Reset
+  A practical baseline for better web development
+*/
+
+/* More intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Enable keyword animations */
+html {
+  interpolate-size: allow-keywords;
+}
+
+/* Prevent horizontal scroll */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  /* Add accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent scroll when mobile menu is open */
+body.prevent-scroll {
+  overflow: hidden;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Remove list bullets and indent if is driven by a class */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Remove default link styles if is driven by a class */
+a[class] {
+  text-decoration: none;
+}
+
+/* Make links inherit color */
+a {
+  color: inherit;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* Prevent empty elements to create empty lines */
+:empty:where(p, h1, h2, h3, h4, h5, h6) {
+  display: none;
+}
+
+/* Reduce motion for accessibility reasons */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

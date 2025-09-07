@@ -37,6 +37,7 @@ const initializeMenuState = (
     mobileMenu.removeAttribute("aria-hidden");
     // Remove prevent-scroll class when switching to desktop
     document.body.classList.remove("prevent-scroll");
+    document.body.classList.remove("has-navigation-open");
   }
 };
 
@@ -63,8 +64,10 @@ const handleMenuToggle = (
     // Toggle prevent-scroll class on body
     if (isExpanded) {
       document.body.classList.remove("prevent-scroll");
+      document.body.classList.remove("has-navigation-open");
     } else {
       document.body.classList.add("prevent-scroll");
+      document.body.classList.add("has-navigation-open");
     }
   }
 
@@ -81,8 +84,8 @@ const handleMenuToggle = (
  * @returns {void}
  */
 export const initMobileMenu = (breakpoint = DEFAULT_BREAKPOINT) => {
-  const menuButton = document.querySelector(".mobile-menu-toggle");
-  const mobileMenu = document.querySelector(".nav-container");
+  const menuButton = document.querySelector(".nav-toggle");
+  const mobileMenu = document.querySelector(".header__nav-container");
 
   if (!menuButton || !mobileMenu) return;
 

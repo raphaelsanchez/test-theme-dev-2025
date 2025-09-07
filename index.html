@@ -13,55 +13,57 @@
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to main content</a>
-    <header class="site-header is-layout-constrained" role="banner">
-      <div class="is-layout-flex is-justify-between">
-        <img src="/images/logo-productly.svg" alt="Productly logo" />
-        <div class="nav-container is-layout-flex is-justify-right">
-          <nav class="nav-primary" aria-hidden="true">
-            <ul class="nav-items is-layout-flex" aria-label="Main navigation">
-              <li class="nav-item">
+    <header class="header" role="banner">
+      <div class="header__container container">
+        <img
+          class="header__logo"
+          src="/images/logo-productly.svg"
+          alt="Productly logo"
+        />
+        <div class="header__nav-container">
+          <nav class="nav header__nav--primary" aria-hidden="true">
+            <ul class="nav__items" aria-label="Main navigation">
+              <li class="nav__item">
                 <a
-                  class="nav-link"
+                  class="nav__link"
                   href="#product"
                   title="Discover our products"
                   >Product</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#customers" title="See our customers"
+              <li class="nav__item">
+                <a class="nav__link" href="#customers" title="See our customers"
                   >Customers</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pricing" title="Check our pricing"
+              <li class="nav__item">
+                <a class="nav__link" href="#pricing" title="Check our pricing"
                   >Pricing</a
                 >
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#resources" title="Access resources"
+              <li class="nav__item">
+                <a class="nav__link" href="#resources" title="Access resources"
                   >Resources</a
                 >
               </li>
             </ul>
           </nav>
-          <nav
-            class="nav-cta is-layout-flex is-align-center"
-            aria-label="Sign in or sign up"
-          >
-            <a class="button text-sm is-style-outline" href="#signin"
+          <nav class="nav header__nav--cta" aria-label="Sign in or sign up">
+            <a class="button button--outline button--sm" href="#signin"
               >Sign in</a
             >
-            <a class="button text-sm" href="#signup">Sign up</a>
+            <a class="button button--sm" href="#signup">Sign up</a>
           </nav>
         </div>
         <button
-          class="button is-style-hollow mobile-menu-toggle"
+          class="button button--hollow nav-toggle"
           aria-label="Toggle mobile menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
           type="button"
         >
           <svg
+            class="nav-toggle__icon"
             width="30"
             height="30"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,26 +80,28 @@
       </div>
     </header>
 
-    <main id="content" class="site-content">
-      <section class="is-layout-constrained" id="hero">
-        <div class="columns is-align-center is-mobile-stacked gap-xxl">
+    <main class="content" id="content">
+      <section class="content-section content-section--hero" id="hero">
+        <div class="content-section__container container">
           <div
-            class="column is-layout-flex is-direction-column is-align-start gap-lg"
+            class="content-section__content"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <h1 class="hero-title text-xl">The Design Thinking superpowers</h1>
-            <p class="hero-description text-md">
+            <hgroup class="content-section__header">
+              <h1 class="content-section__title content-section__title--hero">
+                The Design Thinking superpowers
+              </h1>
+            </hgroup>
+            <p class="content-section__description">
               Tools, tutorials, design and innovation experts, all in one place!
               The most intuitive way to imagine your next user experience.
             </p>
             <div class="button-group">
               <a class="button" href="#get-started">Get started</a>
-              <a
-                class="button is-style-link has-accent-1-text-color"
-                href="#watch-video"
-              >
+              <a class="button button--hollow" href="#watch-video">
                 <svg
+                  class="button-group__video-icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
                   height="19"
@@ -115,7 +119,11 @@
               </a>
             </div>
           </div>
-          <div class="column" data-aos="fade-left" data-aos-duration="1000">
+          <div
+            class="content-section__image"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img
               src="/images/design-thinking-superpowers.svg"
               alt="Illustration of people jumping for celebration"
@@ -124,139 +132,144 @@
         </div>
       </section>
 
-      <section
-        class="is-layout-constrained has-bg-ellipse-gradient-reverse"
-        id="features"
-      >
-        <div class="is-layout-flex is-direction-column is-align-center gap-xl">
+      <section class="content-section content-section--features" id="features">
+        <div class="features__container container">
           <h2
-            class="text-lg text-center font-bold container-width-narrow"
+            class="features__title"
             data-aos="fade-up"
             data-aos-duration="800"
           >
             We design tools to unveil your&nbsp;superpowers
           </h2>
-          <div class="features-grid">
+          <div class="grid">
             <div
-              class="feature-card is-layout-flex is-direction-column is-align-start gap-md"
+              class="features__card"
               data-aos="zoom-in"
               data-aos-duration="600"
               data-aos-delay="100"
             >
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect
+              <div class="features__card-icon features__card-icon--accent-2">
+                <svg
                   width="50"
                   height="50"
-                  rx="19"
-                  fill="var(--color-accent-2)"
-                />
-                <path
-                  d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
-                  fill="white"
-                />
-              </svg>
-              <h3 class="feature-title">First click tests</h3>
-              <p class="feature-description">
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    width="50"
+                    height="50"
+                    rx="19"
+                    fill="var(--color-accent-2)"
+                  />
+                  <path
+                    d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <h3 class="features__card-title">First click tests</h3>
+              <p class="features__card-description">
                 While most people enjoy casino gambling,
               </p>
             </div>
 
             <div
-              class="feature-card is-layout-flex is-direction-column is-align-start gap-md"
+              class="features__card"
               data-aos="zoom-in"
               data-aos-duration="600"
               data-aos-delay="200"
             >
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect
+              <div class="features__card-icon features__card-icon--accent-1">
+                <svg
                   width="50"
                   height="50"
-                  rx="19"
-                  fill="var(--color-accent-1)"
-                />
-                <path
-                  d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
-                  fill="white"
-                />
-              </svg>
-              <h3 class="feature-title">Design surveys</h3>
-              <p class="feature-description">
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    width="50"
+                    height="50"
+                    rx="19"
+                    fill="var(--color-accent-1)"
+                  />
+                  <path
+                    d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <h3 class="features__card-title">Design surveys</h3>
+              <p class="features__card-description">
                 Sports betting, lottery and bingo playing for the fun.
               </p>
             </div>
 
             <div
-              class="feature-card is-layout-flex is-direction-column is-align-start gap-md"
+              class="features__card"
               data-aos="zoom-in"
               data-aos-duration="600"
               data-aos-delay="300"
             >
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect
+              <div class="features__card-icon features__card-icon--accent-3">
+                <svg
                   width="50"
                   height="50"
-                  rx="19"
-                  fill="var(--color-accent-3)"
-                />
-                <path
-                  d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
-                  fill="white"
-                />
-              </svg>
-              <h3 class="feature-title">Preference tests</h3>
-              <p class="feature-description">
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    width="50"
+                    height="50"
+                    rx="19"
+                    fill="var(--color-accent-3)"
+                  />
+                  <path
+                    d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <h3 class="features__card-title">Preference tests</h3>
+              <p class="features__card-description">
                 The Myspace page defines the individual.
               </p>
             </div>
 
             <div
-              class="feature-card is-layout-flex is-direction-column is-align-start gap-md"
+              class="features__card"
               data-aos="zoom-in"
               data-aos-duration="600"
               data-aos-delay="400"
             >
-              <svg
-                width="50"
-                height="50"
-                viewBox="0 0 50 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect
+              <div class="features__card-icon features__card-icon--accent-4">
+                <svg
                   width="50"
                   height="50"
-                  rx="19"
-                  fill="var(--color-accent-4)"
-                />
-                <path
-                  d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
-                  fill="white"
-                />
-              </svg>
-              <h3 class="feature-title">Five second tests</h3>
-              <p class="feature-description">
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    width="50"
+                    height="50"
+                    rx="19"
+                    fill="var(--color-accent-4)"
+                  />
+                  <path
+                    d="M41.2176 14.4587C40.6188 13.8471 39.648 13.8471 39.0491 14.4587L20.6788 33.2198L13.6176 26.0084C13.0188 25.3968 12.048 25.3969 11.4491 26.0084C10.8503 26.6199 10.8503 27.6114 11.4491 28.2229L19.5946 36.5415C20.1932 37.153 21.1647 37.1526 21.7631 36.5415L41.2176 16.6733C41.8164 16.0618 41.8163 15.0703 41.2176 14.4587Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <h3 class="features__card-title">Five second tests</h3>
+              <p class="features__card-description">
                 Personal choices and the overall personality of the person.
               </p>
             </div>
@@ -267,41 +280,48 @@
         </div>
       </section>
 
-      <section class="is-layout-constrained" id="professionals">
-        <div class="columns is-align-center is-mobile-stacked gap-xxl">
+      <section
+        class="content-section content-section--professionals"
+        id="professionals"
+      >
+        <div class="content-section__container container">
           <div
-            class="column is-layout-flex is-direction-column is-align-start gap-lg"
+            class="content-section__content"
             data-aos="fade-right"
             data-aos-duration="800"
           >
-            <hgroup>
-              <p>Effortless Validation for</p>
-              <h2 class="text-lg font-bold">Design professionals</h2>
+            <hgroup class="content-section__header">
+              <p class="content-section__subtitle">Effortless Validation for</p>
+              <h2 class="content-section__title">Design professionals</h2>
             </hgroup>
-            <p>
+            <p class="content-section__description">
               The Myspace page defines the individual, his or her
               characteristics, traits, personal choices and the overall
               personality of the person.
             </p>
-            <dl>
-              <dt>Accessory makers</dt>
-              <dd>
+            <dl class="description-list">
+              <dt class="description-list__term">Accessory makers</dt>
+              <dd class="description-list__description">
                 While most people enjoy casino gambling, sports betting, lottery
                 and bingo playing for the fun
               </dd>
-              <dt>Alterationists</dt>
-              <dd>
+              <dt class="description-list__term">Alterationists</dt>
+              <dd class="description-list__description">
                 If you are looking for a new way to promote your business that
-                won’t cost you more money
+                won't cost you more money
               </dd>
-              <dt>Custom Design designers</dt>
-              <dd>
+              <dt class="description-list__term">Custom Design designers</dt>
+              <dd class="description-list__description">
                 If you are looking for a new way to promote your business that
-                won’t cost you more money
+                won't cost you more money
               </dd>
             </dl>
           </div>
-          <div class="column" data-aos="fade-left" data-aos-duration="800">
+          <div
+            class="content-section__image"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
             <img
               src="/images/design-professionnal.svg"
               alt="Illustration of a man showing a design"
@@ -310,37 +330,45 @@
         </div>
       </section>
 
-      <section class="is-layout-constrained" id="managers">
+      <section class="content-section content-section--managers" id="managers">
         <div
-          class="columns is-align-center is-mobile-stacked gap-xxl is-desktop-reverse"
+          class="content-section__container content-section__container--reverse container"
         >
           <div
-            class="column is-layout-flex is-direction-column is-align-start gap-lg"
+            class="content-section__content"
             data-aos="fade-left"
             data-aos-duration="800"
           >
-            <hgroup>
-              <p>Easier decision making for</p>
-              <h2 class="text-lg font-bold">Product managers</h2>
+            <hgroup class="content-section__header">
+              <p class="content-section__subtitle">
+                Easier decision making for
+              </p>
+              <h2 class="content-section__title">Product managers</h2>
             </hgroup>
-            <p>
+            <p class="content-section__description">
               The Myspace page defines the individual, his or her
               characteristics, traits, personal choices and the overall
               personality of the person.
             </p>
-            <ul class="list is-style-checkmark">
-              <li>Never worry about overpaying for your energy again.</li>
-              <li>
+            <ul class="list list--checklist">
+              <li class="list__item">
+                Never worry about overpaying for your energy again.
+              </li>
+              <li class="list__item">
                 We will only switch you to energy companies that we trust and
                 will treat you right
               </li>
-              <li>
+              <li class="list__item">
                 We track the markets daily and know where the savings are.
               </li>
             </ul>
           </div>
 
-          <div class="column" data-aos="fade-right" data-aos-duration="800">
+          <div
+            class="content-section__image"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
             <img
               src="/images/product-managers.svg"
               alt="Illustration of a man working on laptop"
@@ -349,42 +377,49 @@
         </div>
       </section>
 
-      <section class="is-layout-constrained" id="marketers">
-        <div class="columns is-align-center is-mobile-stacked gap-xxl">
+      <section
+        class="content-section content-section--marketers"
+        id="marketers"
+      >
+        <div class="content-section__container container">
           <div
-            class="column is-layout-flex is-direction-column is-align-start gap-lg"
+            class="content-section__content"
             data-aos="fade-right"
             data-aos-duration="800"
           >
-            <hgroup>
-              <p>Optimisation for</p>
-              <h2 class="text-lg font-bold">Marketers</h2>
+            <hgroup class="content-section__header">
+              <p class="content-section__subtitle">Optimisation for</p>
+              <h2 class="content-section__title">Marketers</h2>
             </hgroup>
-            <p>
+            <p class="content-section__description">
               Few would argue that, despite the advancements of feminism over
               the past three decades, women still face a double standard when it
               comes to their behavior.
             </p>
-            <dl>
-              <dt>Accessory makers</dt>
-              <dd>
+            <dl class="description-list">
+              <dt class="description-list__term">Accessory makers</dt>
+              <dd class="description-list__description">
                 While most people enjoy casino gambling, sports betting, lottery
                 and bingo playing for the fun
               </dd>
-              <dt>Alterationists</dt>
-              <dd>
+              <dt class="description-list__term">Alterationists</dt>
+              <dd class="description-list__description">
                 If you are looking for a new way to promote your business that
-                won’t cost you more money,
+                won't cost you more money,
               </dd>
-              <dt>Custom Design designers</dt>
-              <dd>
+              <dt class="description-list__term">Custom Design designers</dt>
+              <dd class="description-list__description">
                 If you are looking for a new way to promote your business that
-                won’t cost you more money,
+                won't cost you more money,
               </dd>
             </dl>
           </div>
 
-          <div class="column" data-aos="fade-left" data-aos-duration="800">
+          <div
+            class="content-section__image"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
             <img
               src="/images/marketers.svg"
               alt="Illustration of a man showing a board with cards"
@@ -394,345 +429,347 @@
       </section>
 
       <section
-        class="is-layout-constrained has-bg-ellipse-gradient"
+        class="content-section content-section--super-hero"
         id="hero-cta"
       >
-        <div
-          class="section-needs-hero is-layout-flex is-direction-column is-align-center is-justify-center relative"
-        >
+        <div class="content-section__container container">
           <div
-            class="container-width-narrow is-layout-flex is-direction-column is-align-center gap-lg"
+            class="content-section__content"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <h2 class="text-lg font-bold text-center">Need a super hero?</h2>
-            <p class="text-center has-contrast-500-text-color">
+            <h2 class="content-section__title">Need a super hero?</h2>
+            <p class="content-section__description">
               Do you require some help for your project: Conception workshop,
               prototyping, marketing strategy, landing page, Ux/Ui?
             </p>
-            <a
-              class="button"
-              href="#contact-expert"
-              title="Contact an expert for your project"
-              >Contact our expert</a
-            >
+            <div class="button-group">
+              <a
+                class="button"
+                href="#contact-expert"
+                title="Contact an expert for your project"
+                >Contact our expert</a
+              >
+            </div>
           </div>
 
-          <div class="floating-elements">
+          <div class="content-section__floating-elements">
             <div
-              class="floating-element element-1"
+              class="content-section__floating-element content-section__floating-element--1"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-delay="200"
             >
-              <div class="floating-element-content">
-                <img
-                  src="/images/avator.jpg"
-                  alt="Portrait of a pitch expert"
-                />
-                <p>I can take care of your pitch</p>
-              </div>
+              <img src="/images/avator.jpg" alt="Portrait of a pitch expert" />
+              <p>I can take care of your pitch</p>
             </div>
             <div
-              class="floating-element element-2"
+              class="content-section__floating-element content-section__floating-element--2"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-delay="400"
             >
-              <div class="floating-element-content">
-                <img
-                  src="/images/avator-1.jpg"
-                  alt="Portrait of an app prototyping expert"
-                />
-                <p>I can prototype your app</p>
-              </div>
+              <img
+                src="/images/avator-1.jpg"
+                alt="Portrait of an app prototyping expert"
+              />
+              <p>I can prototype your app</p>
             </div>
             <div
-              class="floating-element element-3"
+              class="content-section__floating-element content-section__floating-element--3"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-delay="600"
             >
-              <div class="floating-element-content">
-                <img
-                  src="/images/avator-2.jpg"
-                  alt="Portrait of a marketing strategy expert"
-                />
-                <p>I can help marketing strategy</p>
-              </div>
+              <img
+                src="/images/avator-2.jpg"
+                alt="Portrait of a marketing strategy expert"
+              />
+              <p>I can help marketing strategy</p>
             </div>
             <div
-              class="floating-element element-4"
+              class="content-section__floating-element content-section__floating-element--4"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-delay="800"
             >
-              <div class="floating-element-content">
-                <img
-                  src="/images/avator-3.jpg"
-                  alt="Portrait of a user profile definition expert"
-                />
-                <p>I will define the profile of your users</p>
-              </div>
+              <img
+                src="/images/avator-3.jpg"
+                alt="Portrait of a user profile definition expert"
+              />
+              <p>I will define the profile of your users</p>
             </div>
             <div
-              class="floating-element element-5"
+              class="content-section__floating-element content-section__floating-element--5"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-delay="1000"
             >
-              <div class="floating-element-content">
-                <img
-                  src="/images/avator-4.jpg"
-                  alt="Portrait of a website design expert"
-                />
-                <p>I can design you website</p>
-              </div>
+              <img
+                src="/images/avator-4.jpg"
+                alt="Portrait of a website design expert"
+              />
+              <p>I can design you website</p>
             </div>
           </div>
         </div>
       </section>
 
       <section
-        class="is-layout-constrained is-layout-flex is-direction-column gap-lg"
+        class="content-section content-section--marketing-strategies"
         id="marketing-strategies"
       >
-        <hgroup data-aos="fade-up" data-aos-duration="800">
-          <h2 class="text-lg font-bold">Marketing Strategies</h2>
-          <p>
-            Join 40,000+ other marketers and get proven strategies on email
-            marketing
-          </p>
-        </hgroup>
-
-        <div
-          class="carousel"
-          role="region"
-          aria-label="Marketing strategy articles"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="200"
-        >
-          <div class="carousel-items" role="tabpanel" aria-live="polite">
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article1"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/positive-thinking.png"
-                alt="Illustration representing positive thinking"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Abdullah</span> | 03 March 2019</p>
-                <h3 class="text-md font-bold" id="article1">
-                  Increasing Prosperity With Positive Thinking
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article2"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/step-to-success.png"
-                alt="Illustration representing steps to success"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Abdullah</span> | 03 March 2019</p>
-                <h3 class="text-md font-bold" id="article2">
-                  Motivation Is The First Step To Success
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article3"
-            >
-              <figure class="carousel-item-image">
-                <img
-                  src="/images/personal-or-business-life.png"
-                  alt="Illustration representing work-life balance"
-                />
-              </figure>
-              <div class="carousel-item-content">
-                <p>By <span>Abdullah</span> | 03 March 2019</p>
-                <h3 class="text-md font-bold" id="article3">
-                  Success Steps For Your Personal Or Business Life
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article4"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/positive-thinking.png"
-                alt="Illustration representing positive thinking"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Sarah</span> | 15 April 2019</p>
-                <h3 class="text-md font-bold" id="article4">
-                  Building Confidence Through Daily Practice
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article5"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/step-to-success.png"
-                alt="Illustration representing steps to success"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Michael</span> | 22 May 2019</p>
-                <h3 class="text-md font-bold" id="article5">
-                  The Power of Goal Setting in Business
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article6"
-            >
-              <figure class="carousel-item-image">
-                <img
-                  src="/images/personal-or-business-life.png"
-                  alt="Illustration representing work-life balance"
-                />
-              </figure>
-              <div class="carousel-item-content">
-                <p>By <span>Emma</span> | 10 June 2019</p>
-                <h3 class="text-md font-bold" id="article6">
-                  Time Management Strategies That Actually Work
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article4"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/positive-thinking.png"
-                alt="Illustration representing positive thinking"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Sarah</span> | 15 April 2019</p>
-                <h3 class="text-md font-bold" id="article4">
-                  Building Confidence Through Daily Practice
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article5"
-            >
-              <img
-                class="carousel-item-image"
-                src="/images/step-to-success.png"
-                alt="Illustration representing steps to success"
-              />
-              <div class="carousel-item-content">
-                <p>By <span>Michael</span> | 22 May 2019</p>
-                <h3 class="text-md font-bold" id="article5">
-                  The Power of Goal Setting in Business
-                </h3>
-              </div>
-            </article>
-            <article
-              class="carousel-item"
-              role="tabpanel"
-              aria-labelledby="article6"
-            >
-              <figure class="carousel-item-image">
-                <img
-                  src="/images/personal-or-business-life.png"
-                  alt="Illustration representing work-life balance"
-                />
-              </figure>
-              <div class="carousel-item-content">
-                <p>By <span>Emma</span> | 10 June 2019</p>
-                <h3 class="text-md font-bold" id="article6">
-                  Time Management Strategies That Actually Work
-                </h3>
-              </div>
-            </article>
-          </div>
-          <div
-            class="carousel-bullets-controls"
-            role="tablist"
-            aria-label="Carousel navigation"
+        <div class="content-section__container container">
+          <hgroup
+            class="content-section__header"
+            data-aos="fade-up"
+            data-aos-duration="800"
           >
-            <!-- Navigation buttons will be generated dynamically by JavaScript -->
+            <h2 class="marketing-strategies__title">Marketing Strategies</h2>
+            <p class="marketing-strategies__description">
+              Join 40,000+ other marketers and get proven strategies on email
+              marketing
+            </p>
+          </hgroup>
+
+          <div
+            class="carousel"
+            role="region"
+            aria-label="Marketing strategy articles"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="carousel-items" role="tabpanel" aria-live="polite">
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article1"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/positive-thinking.png"
+                  alt="Illustration representing positive thinking"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Abdullah</span> | 03 March 2019</p>
+                  <h3 class="text-md font-bold" id="article1">
+                    Increasing Prosperity With Positive Thinking
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article2"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/step-to-success.png"
+                  alt="Illustration representing steps to success"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Abdullah</span> | 03 March 2019</p>
+                  <h3 class="text-md font-bold" id="article2">
+                    Motivation Is The First Step To Success
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article3"
+              >
+                <figure class="carousel-item-image">
+                  <img
+                    src="/images/personal-or-business-life.png"
+                    alt="Illustration representing work-life balance"
+                  />
+                </figure>
+                <div class="carousel-item-content">
+                  <p>By <span>Abdullah</span> | 03 March 2019</p>
+                  <h3 class="text-md font-bold" id="article3">
+                    Success Steps For Your Personal Or Business Life
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article4"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/positive-thinking.png"
+                  alt="Illustration representing positive thinking"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Sarah</span> | 15 April 2019</p>
+                  <h3 class="text-md font-bold" id="article4">
+                    Building Confidence Through Daily Practice
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article5"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/step-to-success.png"
+                  alt="Illustration representing steps to success"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Michael</span> | 22 May 2019</p>
+                  <h3 class="text-md font-bold" id="article5">
+                    The Power of Goal Setting in Business
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article6"
+              >
+                <figure class="carousel-item-image">
+                  <img
+                    src="/images/personal-or-business-life.png"
+                    alt="Illustration representing work-life balance"
+                  />
+                </figure>
+                <div class="carousel-item-content">
+                  <p>By <span>Emma</span> | 10 June 2019</p>
+                  <h3 class="text-md font-bold" id="article6">
+                    Time Management Strategies That Actually Work
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article4"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/positive-thinking.png"
+                  alt="Illustration representing positive thinking"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Sarah</span> | 15 April 2019</p>
+                  <h3 class="text-md font-bold" id="article4">
+                    Building Confidence Through Daily Practice
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article5"
+              >
+                <img
+                  class="carousel-item-image"
+                  src="/images/step-to-success.png"
+                  alt="Illustration representing steps to success"
+                />
+                <div class="carousel-item-content">
+                  <p>By <span>Michael</span> | 22 May 2019</p>
+                  <h3 class="text-md font-bold" id="article5">
+                    The Power of Goal Setting in Business
+                  </h3>
+                </div>
+              </article>
+              <article
+                class="carousel-item"
+                role="tabpanel"
+                aria-labelledby="article6"
+              >
+                <figure class="carousel-item-image">
+                  <img
+                    src="/images/personal-or-business-life.png"
+                    alt="Illustration representing work-life balance"
+                  />
+                </figure>
+                <div class="carousel-item-content">
+                  <p>By <span>Emma</span> | 10 June 2019</p>
+                  <h3 class="text-md font-bold" id="article6">
+                    Time Management Strategies That Actually Work
+                  </h3>
+                </div>
+              </article>
+            </div>
+            <div
+              class="carousel-bullets-controls"
+              role="tablist"
+              aria-label="Carousel navigation"
+            >
+              <!-- Navigation buttons will be generated dynamically by JavaScript -->
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer is-layout-constrained" role="contentinfo">
-      <div class="columns is-mobile-stacked is-align-start">
-        <div class="column">
+    <footer class="footer" role="contentinfo">
+      <div class="footer__container container">
+        <div class="footer__logo">
           <img src="/images/logo-productly.svg" alt="Productly logo" />
         </div>
-        <div
-          class="column footer-nav is-layout-flex is-align-start is-mobile-stacked"
-        >
-          <nav id="quick-links" aria-labelledby="quick-links-heading">
-            <h3 id="quick-links-heading" class="text-base font-bold">
-              Quick links
-            </h3>
-            <ul class="nav-list is-direction-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+        <div class="footer__nav-container">
+          <nav
+            class="nav footer__nav"
+            id="quick-links"
+            aria-labelledby="quick-links-heading"
+          >
+            <h3 id="quick-links-heading" class="nav__title">Quick links</h3>
+            <ul class="nav__items--vertical">
+              <li class="nav__item">
+                <a class="nav__link" href="#">About Us</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Contact</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">FAQ</a>
+              </li>
             </ul>
           </nav>
-          <nav id="legal-links" aria-labelledby="legal-links-heading">
-            <h3 id="legal-links-heading" class="text-base font-bold">
-              Legal stuff
-            </h3>
-            <ul class="nav-list is-direction-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Disclaimer</a>
+          <nav
+            class="nav footer__nav"
+            id="legal-links"
+            aria-labelledby="legal-links-heading"
+          >
+            <h3 id="legal-links-heading" class="nav__title">Legal stuff</h3>
+            <ul class="nav__items--vertical">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Disclaimer</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Financing</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Financing</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Privacy Policy</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Privacy Policy</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Terms of Service</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Terms of Service</a>
               </li>
             </ul>
           </nav>
         </div>
-        <div class="column footer-signup">
-          <h3 class="text-base font-bold">
+        <div class="footer__signup">
+          <h3 class="footer__signup-title">
             Knowing you're always on the best energy deal.
           </h3>
-          <form action="#" method="post" novalidate>
-            <div class="is-layout-flex is-direction-column is-align-start">
+          <form class="footer__form" action="#" method="post" novalidate>
+            <div class="footer__form-group">
               <label for="phone-number" class="visually-hidden"
                 >Phone number</label
               >
               <input
+                class="footer__form-input"
                 type="tel"
                 id="phone-number"
                 name="phone"

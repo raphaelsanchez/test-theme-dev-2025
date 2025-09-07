@@ -1,0 +1,140 @@
+/*
+  Navigation Component (BEM)
+*/
+
+.nav {
+  display: flex;
+}
+
+.nav__items {
+  display: flex;
+  gap: var(--spacing-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__items--vertical {
+  flex-direction: column;
+}
+
+.nav--footer .nav__items {
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.nav__item {
+  margin: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-base);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* Navigation - Legacy styles (kept for backward compatibility) */
+.nav-items {
+  gap: var(--spacing-md);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.nav-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Mobile menu animations - État fermé par défaut */
+.nav-toggle__icon path:nth-of-type(1) {
+  transform-origin: center;
+  animation: hamburgerTopReset 300ms ease-in-out forwards;
+}
+
+.nav-toggle__icon path:nth-of-type(2) {
+  transform-origin: center;
+  animation: hamburgerMiddleReset 300ms ease-in-out forwards;
+}
+
+.nav-toggle__icon path:nth-of-type(3) {
+  transform-origin: center;
+  animation: hamburgerBottomReset 300ms ease-in-out forwards;
+}
+
+/* État ouvert - Formation de la croix */
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon path:nth-of-type(1) {
+  animation: hamburgerTopToCross 300ms ease-in-out forwards;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon path:nth-of-type(2) {
+  animation: hamburgerMiddleToCross 300ms ease-in-out forwards;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon path:nth-of-type(3) {
+  animation: hamburgerBottomToCross 300ms ease-in-out forwards;
+}
+
+/* Burger menu  */
+
+/* Animations pour l'état fermé (retour au burger) */
+@keyframes hamburgerTopReset {
+  0% {
+    transform: translateY(7px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes hamburgerMiddleReset {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hamburgerBottomReset {
+  0% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Animations pour l'état ouvert (formation de la croix) */
+@keyframes hamburgerTopToCross {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(7px) rotate(45deg);
+  }
+}
+
+@keyframes hamburgerMiddleToCross {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hamburgerBottomToCross {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
