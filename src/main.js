@@ -18,10 +18,10 @@ import "./css/button.css";
 
 // Navigation component
 import "./css/navigation.css";
-import { initMobileMenu } from "./mobileMenu.js";
+import { initMobileMenu } from "./js/mobileMenu.js";
 
 // Styles for the project
-import "./style.css";
+import "./css/layout.css";
 
 // Utilities
 import "./css/utilities.css";
@@ -31,7 +31,7 @@ import "./css/a11y.css";
 
 // Carousel component
 import "./css/carousel.css";
-import { initCarousels } from "./carousel.js";
+import { initCarousels } from "./js/carousel.js";
 
 // Animations component
 import AOS from "aos";
