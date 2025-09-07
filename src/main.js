@@ -7,6 +7,9 @@ import "./css/tokens.css";
 // Fonts
 import "./css/fonts.css";
 
+// Bases
+import "./css/bases.css";
+
 // List component
 import "./css/list.css";
 
@@ -19,6 +22,12 @@ import { initMobileMenu } from "./mobileMenu.js";
 
 // Styles for the project
 import "./style.css";
+
+// Utilities
+import "./css/utilities.css";
+
+// Accessibility
+import "./css/a11y.css";
 
 // Carousel component
 import "./css/carousel.css";

@@ -1,0 +1,56 @@
+/*
+  Base elements
+*/
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent-1);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-base);
+}
+
+/* Prevent scroll when mobile menu is open */
+html:has(body.prevent-scroll) {
+  overflow: hidden;
+}
+
+/* Text */
+body {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  color: var(--color-contrast);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+/* Lists */
+dt {
+  font-weight: var(--font-weight-bold);
+  margin-block-end: var(--spacing-xs);
+}
+
+dd {
+  margin-block-end: var(--spacing-lg);
+}
+
+/* Forms */
+input {
+  width: 100%;
+  border: 1px solid var(--color-contrast-100);
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-sm) var(--spacing-base);
+  margin-block-end: var(--spacing-md);
+}
+
+input:focus-visible {
+  outline: 2px solid var(--color-accent-1);
+  outline-offset: 2px;
+}

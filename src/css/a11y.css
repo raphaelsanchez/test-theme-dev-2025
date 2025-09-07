@@ -1,0 +1,30 @@
+/* 
+  Accessibility 
+*/
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  transform: translateY(-100vh);
+  transition: var(--transition-base);
+  padding: var(--spacing-xs) var(--spacing-base);
+  background-color: var(--color-accent-1);
+  color: var(--color-accent-1-contrast);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  z-index: 100;
+}
